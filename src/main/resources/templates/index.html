@@ -1,26 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
-    <form method="post" th:action="@{/calcular}" onsubmit="return validar()">
-        <div>
-            <label>Nome</label>
-            <input type="text" name="nome" id="nome" placeholder="Seu nome" required>
-        </div>
-        <div>
-            <label>Peso(KG)</label>
-            <input type="text" name="peso" id="peso" placeholder="Seu peso" >
-        </div>
-        <div>
-            <label>Altura(m)</label>
-            <input type="text" name="altura" id="altura" placeholder="Sua altura">
-        </div>
-        <button type="submit">Calcular IMC</button>
-    </form>
+<form method="post" th:action="@{/calcular}" onsubmit="return validar()">
+    <div>
+        <label>Nome</label>
+        <input type="text" name="nome" id="nome">
+    </div>
+    <div>
+        <label>Peso (kg)</label>
+        <input type="text" name="peso" id="peso">
+    </div>
+    <div>
+        <label>Altura (m)</label>
+        <input type="text" name="altura" id="altura">
+    </div>
+    <button type="submit">Calcular IMC</button>
+</form>
+<p id="erro"></p>
 <script th:src="@{/js/script.js}"></script>
 </body>
 </html>
